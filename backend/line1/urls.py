@@ -17,4 +17,6 @@ Including another URLconf
 
 from django.urls import path
 
-urlpatterns = []
+from apps.user import api as user_api
+
+urlpatterns = [path('user/register/', user_api.register)]
