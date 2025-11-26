@@ -1,14 +1,18 @@
 import "./App.css";
 
-import { Button } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AdminLayout from "./layouts/AdminLayout";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div style={{ padding: 50 }}>
-      <Button variant="contained" color="primary">
-        Hello MUI
-      </Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
