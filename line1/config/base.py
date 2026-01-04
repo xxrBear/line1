@@ -1,7 +1,7 @@
 """
 Django settings for line1 project.
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,8 +46,21 @@ DATABASES = {
     }
 }
 
-# Internationalization
-LANGUAGE_CODE = "zh-hans"
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+            ],
+        },
+    },
+]
+
+
+LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "Asia/Shanghai"
 

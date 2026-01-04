@@ -19,4 +19,4 @@ from django.urls import path
 
 from apps.user import api as user_api
 
-urlpatterns = [path('user/register/', user_api.register)]
+urlpatterns = [path('user/home/', user_api.user_home, name='user_home')]
