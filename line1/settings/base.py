@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.base',
     'apps.user',
+    'apps.blog',
 ]
 
 MIDDLEWARE = [
@@ -80,3 +81,5 @@ STATIC_URL = "static/"
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATIC_ROOT = BASE_DIR / 'prod_static'

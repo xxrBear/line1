@@ -3,11 +3,11 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 
-from apps.user import views as user_views
+from apps.blog import views as blog_views
 
 urlpatterns = [
+    path('', blog_views.BlogView.as_view()),
     path('admin/', admin.site.urls),
-    path('user/home/', user_views.user_home, name='user_home'),
 ]
 
 if settings.DEBUG is True:
