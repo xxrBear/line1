@@ -51,3 +51,4 @@ venv.bak/
 migrations/
 
 prod_static/
+local.py
