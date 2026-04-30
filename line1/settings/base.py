@@ -13,7 +13,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-# Application definition
 INSTALLED_APPS = [
     "debug_toolbar",
     'django.contrib.admin',
@@ -41,14 +40,12 @@ ROOT_URLCONF = "line1.urls"
 
 WSGI_APPLICATION = "line1.wsgi.application"
 
-
-# Database
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": 'line1',
-        "HOST": '127.0.0.1',
-        'PORT': 5432,
+        "HOST": '172.24.224.1',
+        'PORT': '5432',
         'USER': 'postgres',
         'PASSWORD': '123456',
     }
