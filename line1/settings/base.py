@@ -67,6 +67,12 @@ TEMPLATES = [
     },
 ]
 
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://:helloworld@127.0.0.1:6379/0",
+    }
+}
 
 LANGUAGE_CODE = "en-us"
 
@@ -74,7 +80,7 @@ TIME_ZONE = "Asia/Shanghai"
 
 USE_I18N = False
 
-USE_TZ = False
+USE_TZ = True
 
 STATIC_URL = "static/"
 
