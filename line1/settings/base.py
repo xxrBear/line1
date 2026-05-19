@@ -15,7 +15,6 @@ INTERNAL_IPS = [
 
 INSTALLED_APPS = [
     "debug_toolbar",
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -90,8 +89,13 @@ USE_I18N = False
 
 USE_TZ = True
 
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# -----------------------------------------------------------------------
+# 静态文件
+# -----------------------------------------------------------------------
 STATIC_URL = "static/"
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_ROOT = BASE_DIR / 'prod_static'
