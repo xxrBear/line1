@@ -71,8 +71,16 @@ CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
         "LOCATION": "redis://:helloworld@127.0.0.1:6379/0",
-    }
+    },
+    "session_cache": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://:helloworld@127.0.0.1:6379/1",
+    },
 }
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+SESSION_CACHE_ALIAS = "session_cache"
 
 LANGUAGE_CODE = "en-us"
 
