@@ -1,7 +1,7 @@
 PYTHON := python3
 MANAGE := $(PYTHON) manage.py
 
-.PHONY: run migrate makemigrations shell superuser test help
+.PHONY: run migrate makemigrations shell superuser test help check
 
 help:
 	@echo "Available commands:"
@@ -9,6 +9,7 @@ help:
 	@echo "  make makemigrations # 生成迁移文件"
 	@echo "  make migrate        # 执行迁移"
 	@echo "  make shell          # Django shell"
+	@echo "  make check          # 运行检查"
 	@echo "  make superuser      # 创建管理员"
 	@echo "  make test           # 运行测试"
 
@@ -23,6 +24,9 @@ migrate:
 
 shell:
 	$(MANAGE) shell
+
+check:
+	$(MANAGE) check
 
 superuser:
 	$(MANAGE) createsuperuser
