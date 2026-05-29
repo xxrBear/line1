@@ -1,5 +1,7 @@
 from .base import *  # noqa: F403
 
+DEBUG = False
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
