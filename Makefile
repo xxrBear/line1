@@ -1,7 +1,7 @@
 PYTHON := python3
 MANAGE := $(PYTHON) manage.py
 
-.PHONY: run migrate makemigrations shell superuser test help check
+.PHONY: run migrate makemigrations shell superuser test help check static
 
 help:
 	@echo "Available commands:"
@@ -34,3 +34,5 @@ superuser:
 test:
 	$(MANAGE) test
 
+static:	:
+	$(MANAGE) collectstatic --noinput
