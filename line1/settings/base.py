@@ -3,6 +3,14 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+
+def required_env(name):
+    value = os.getenv(name)
+    if value is None:
+        raise ValueError(f"Environment variable '{name}' is required but not set.")
+    return value
+
+
 SECRET_KEY = "django-insecure-n(sqdhyakh3ph$03a67*cmb0hwd4d)$02$4ulncuhl%-+md76t"
 
 DEBUG = True
