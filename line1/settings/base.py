@@ -1,7 +1,11 @@
 import os
 from pathlib import Path
 
+import environ
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+environ.Env.read_env(BASE_DIR / '.env')
 
 
 def required_env(name):
@@ -54,7 +58,7 @@ DATABASES = {
         "HOST": required_env('POSTGRES_HOST'),
         'PORT': required_env('POSTGRES_PORT'),
         'USER': required_env('POSTGRES_USER'),
-        'PASSWORD': required_env('POSTGRES_PASSWORD')
+        'PASSWORD': required_env('POSTGRES_PASSWORD'),
     }
 }
 
