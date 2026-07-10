@@ -12,6 +12,7 @@ help:
 	@echo "  make check          # 运行检查"
 	@echo "  make superuser      # 创建管理员"
 	@echo "  make test           # 运行测试"
+	@echo "  make static         # 收集静态文件"
 
 run:
 	$(MANAGE) runserver
@@ -34,5 +35,5 @@ superuser:
 test:
 	$(MANAGE) test
 
-static:	:
+static:
 	$(MANAGE) collectstatic --noinput
