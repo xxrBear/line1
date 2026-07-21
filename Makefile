@@ -3,7 +3,7 @@ UV      := $(shell command -v uv 2>/dev/null || echo $(HOME)/.local/bin/uv)
 MANAGE  := $(UV) run $(PYTHON) manage.py
 
 .DEFAULT_GOAL := help
-.PHONY: help run migrate makemigrations shell superuser test check dist setup install-uv
+.PHONY: help run migrate makemigrations shell startapp superuser test check dist setup install-uv
 
 help:
 	@echo "Available commands:"
@@ -11,7 +11,8 @@ help:
 	@echo "  make run            # 启动开发服务器"
 	@echo "  make makemigrations # 生成迁移文件"
 	@echo "  make migrate        # 执行迁移"
-	@echo "  make shell          # Django shell"
+	@echo "  make shell          # 进入命令行"
+	@echo "  make startapp       # 创建应用"
 	@echo "  make check          # 运行检查"
 	@echo "  make superuser      # 创建管理员"
 	@echo "  make test           # 运行测试"
@@ -40,6 +41,9 @@ migrate:
 shell:
 	$(MANAGE) shell
 
+startapp:
+	$(MANAGE) startapp $(filter-out $@,$(MAKECMDGOALS))
+
 check:
 	$(MANAGE) check
 
@@ -51,3 +55,4 @@ test:
 
 dist:
 	$(MANAGE) collectstatic --noinput
+
