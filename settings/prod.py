@@ -1,4 +1,4 @@
-from .base import *  # noqa: F403
+from settings.base import *  # noqa: F403
 
 DEBUG = False
 
