@@ -59,6 +59,8 @@ DATABASES = {
         'PORT': required_env('POSTGRES_PORT'),
         'USER': required_env('POSTGRES_USER'),
         'PASSWORD': required_env('POSTGRES_PASSWORD'),
+        'CONN_MAX_AGE': 600,
+        "CONN_HEALTH_CHECKS": True,
     }
 }
 
@@ -213,13 +215,13 @@ LOGGING = {
             'level': 'WARNING',
             'propagate': False,
         },
-        # 安全相关警告(比如CSRF失败、可疑请求等),生产环境必须关注
+        # 安全相关警告(比如CSRF失败、可疑请求等)
         'django.security': {
             'handlers': ['console', 'error_file'],
             'level': 'WARNING',
             'propagate': False,
         },
-        # SQL查询日志,仅DEBUG模式生效
+        # SQL查询日志,仅 DEBUG 模式生效
         'django.db.backends': {
             'handlers': ['sql_file'],
             'level': 'DEBUG',
