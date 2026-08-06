@@ -5,6 +5,8 @@ import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DJANGO_ENV = 'dev'
+
 environ.Env.read_env(BASE_DIR / '.env')
 
 
@@ -119,13 +121,12 @@ STATIC_ROOT = BASE_DIR / 'prod_static'
 # -----------------------------------------------------------------------
 # 日志
 # -----------------------------------------------------------------------
-DJANGO_ENV = 'dev'
 LOG_DIR = Path(os.environ.get('DJANGO_LOG_DIR', BASE_DIR / 'logs'))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
+
 LOG_LEVEL = os.environ.get(
     'DJANGO_LOG_LEVEL', 'INFO' if DJANGO_ENV == 'prod' else 'DEBUG'
 )
-
 
 LOGGING = {
     'version': 1,
@@ -241,6 +242,6 @@ LOGGING = {
     },
     'root': {
         'handlers': ['console', 'app_file'],
-        'level': LOG_LEVEL,
+        'level': 'INFO',
     },
 }
