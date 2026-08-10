@@ -4,6 +4,10 @@ from django.views import View
 from apps.users.forms import UserRegistionForm
 
 
+def healthy(request):
+    return JsonResponse({"message": "ok"}, status=200)
+
+
 class UserRegisterView(View):
     def post(self, request):
         form = UserRegistionForm(request.POST)
