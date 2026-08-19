@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -63,6 +63,9 @@ DATABASES = {
         'PASSWORD': required_env('POSTGRES_PASSWORD'),
         'CONN_MAX_AGE': 600,
         "CONN_HEALTH_CHECKS": True,
+        "OPTIONS": {
+            "pool": True,
+        },
     }
 }
 
