@@ -1,6 +1,6 @@
 from django import forms
 
-from apps.users.models import User
+from apps.user.models import User
 
 
 class UserRegistionForm(forms.ModelForm):

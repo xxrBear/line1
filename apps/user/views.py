@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.http import JsonResponse
 from django.views import View
 
-from apps.users.forms import UserRegistionForm
+from apps.user.forms import UserRegistionForm
 
 
 def healthy(request):

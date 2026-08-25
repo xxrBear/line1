@@ -2,7 +2,7 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf import settings
 from django.urls import path
 
-from apps.users.views import UserLoginView, UserLogoutView, UserRegisterView, healthy
+from apps.user.views import UserLoginView, UserLogoutView, UserRegisterView, healthy
 
 urlpatterns = [
     path('healthy/', healthy, name='healthy'),
