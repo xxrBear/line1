@@ -1,12 +1,12 @@
 /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
-Document
-========
+文档
+====
 */
 
 /**
-Use a better box model (opinionated).
+使用更合理的盒模型
 */
 
 *,
@@ -16,10 +16,10 @@ Use a better box model (opinionated).
 }
 
 /**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the line height in all browsers.
-3. Prevent adjustments of font size after orientation changes in iOS.
-4. Use a more readable tab size (opinionated).
+1. 提高所有浏览器默认字体的一致性。（https://github.com/sindresorhus/modern-normalize/issues/3）
+2. 修正所有浏览器中的行高
+3. 防止 iOS 更改屏幕方向后调整字体大小
+4. 使用更易读的制表符大小
 */
 
 html {
@@ -42,12 +42,12 @@ html {
 }
 
 /*
-Sections
-========
+区块
+====
 */
 
 /**
-Remove the margin in all browsers.
+移除所有浏览器中的外边距
 */
 
 body {
@@ -55,12 +55,12 @@ body {
 }
 
 /*
-Text-level semantics
-====================
+文本级语义
+=========
 */
 
 /**
-Add the correct font weight in Chrome and Safari.
+在 Chrome 和 Safari 中设置正确的字体粗细
 */
 
 b,
@@ -69,8 +69,8 @@ strong {
 }
 
 /**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
+1. 提高所有浏览器默认字体的一致性。（https://github.com/sindresorhus/modern-normalize/issues/3）
+2. 修正所有浏览器中异常的“em”字体大小
 */
 
 code,
@@ -90,7 +90,7 @@ pre {
 }
 
 /**
-Add the correct font size in all browsers.
+在所有浏览器中设置正确的字体大小
 */
 
 small {
@@ -98,7 +98,7 @@ small {
 }
 
 /**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+防止“sub”和“sup”元素影响所有浏览器中的行高
 */
 
 sub,
@@ -118,12 +118,12 @@ sup {
 }
 
 /*
-Tabular data
-============
+表格数据
+========
 */
 
 /**
-Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+修正 Chrome 和 Safari 中表格边框颜色的继承问题。（https://issues.chromium.org/issues/40615503，https://bugs.webkit.org/show_bug.cgi?id=195016）
 */
 
 table {
@@ -131,13 +131,13 @@ table {
 }
 
 /*
-Forms
-=====
+表单
+====
 */
 
 /**
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
+1. 更改所有浏览器中的字体样式
+2. 移除 Firefox 和 Safari 中的外边距
 */
 
 button,
@@ -156,7 +156,7 @@ textarea {
 }
 
 /**
-Correct the inability to style clickable types in iOS and Safari.
+修正 iOS 和 Safari 中无法设置可点击类型样式的问题
 */
 
 button,
@@ -167,7 +167,7 @@ button,
 }
 
 /**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+移除内边距，避免开发者在所有浏览器中将“fieldset”元素的内边距设为零时出现问题
 */
 
 legend {
@@ -175,7 +175,7 @@ legend {
 }
 
 /**
-Add the correct vertical alignment in Chrome and Firefox.
+在 Chrome 和 Firefox 中设置正确的垂直对齐方式
 */
 
 progress {
@@ -183,7 +183,7 @@ progress {
 }
 
 /**
-Correct the cursor style of increment and decrement buttons in Safari.
+修正 Safari 中增减按钮的光标样式
 */
 
 ::-webkit-inner-spin-button,
@@ -192,8 +192,8 @@ Correct the cursor style of increment and decrement buttons in Safari.
 }
 
 /**
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
+1. 修正 Chrome 和 Safari 中异常的外观
+2. 修正 Safari 中的轮廓样式
 */
 
 [type='search'] {
@@ -204,7 +204,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 }
 
 /**
-Remove the inner padding in Chrome and Safari on macOS.
+移除 macOS 上 Chrome 和 Safari 中的内部内边距
 */
 
 ::-webkit-search-decoration {
@@ -212,8 +212,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 }
 
 /**
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
+1. 修正 iOS 和 Safari 中无法设置可点击类型样式的问题
+2. 在 Safari 中将字体属性改为 inherit
 */
 
 ::-webkit-file-upload-button {
@@ -224,12 +224,12 @@ Remove the inner padding in Chrome and Safari on macOS.
 }
 
 /*
-Interactive
-===========
+交互元素
+========
 */
 
 /*
-Add the correct display in Chrome and Safari.
+在 Chrome 和 Safari 中设置正确的显示方式
 */
 
 summary {
