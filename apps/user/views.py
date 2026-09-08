@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.http import JsonResponse
 from django.views import View
 
-from apps.user.forms import UserRegistionForm
+from apps.user.forms import UserRegisterForm
 
 
 def healthy(request):
@@ -12,7 +12,7 @@ def healthy(request):
 
 class UserRegisterView(View):
     def post(self, request):
-        form = UserRegistionForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if not form.is_valid():
             return JsonResponse(form.errors, status=400)
 

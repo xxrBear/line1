@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.base',
-    'apps.users',
+    'apps.user',
 ]
 
 MIDDLEWARE = [
@@ -61,8 +61,6 @@ DATABASES = {
         'PORT': required_env('POSTGRES_PORT'),
         'USER': required_env('POSTGRES_USER'),
         'PASSWORD': required_env('POSTGRES_PASSWORD'),
-        'CONN_MAX_AGE': 600,
-        "CONN_HEALTH_CHECKS": True,
         "OPTIONS": {
             "pool": True,
         },
@@ -110,7 +108,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'user.User'
 
 # -----------------------------------------------------------------------
 # 静态文件
