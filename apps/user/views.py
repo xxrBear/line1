@@ -1,6 +1,7 @@
 from django.contrib.auth import logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import JsonResponse
+from django.shortcuts import render
 from django.views import View
 
 from apps.user.forms import UserRegisterForm
@@ -8,6 +9,10 @@ from apps.user.forms import UserRegisterForm
 
 def healthy(request):
     return JsonResponse({"message": "ok"}, status=200)
+
+
+def index(request):
+    return render(request, "base/base.html")
 
 
 class UserRegisterView(View):
