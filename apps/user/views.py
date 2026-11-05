@@ -11,8 +11,8 @@ def healthy(request):
     return JsonResponse({"message": "ok"}, status=200)
 
 
-def index(request):
-    return render(request, "base/base.html")
+def home(request):
+    return render(request, "base/home.html")
 
 
 class UserRegisterView(View):

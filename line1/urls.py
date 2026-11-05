@@ -7,12 +7,12 @@ from apps.user.views import (
     UserLogoutView,
     UserRegisterView,
     healthy,
-    index,
+    home,
 )
 
 urlpatterns = [
     path('healthy/', healthy, name='healthy'),
-    path('', index),
+    path('', home, name='home'),
     path('register/', UserRegisterView.as_view(), name='register'),
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),

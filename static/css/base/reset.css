@@ -16,7 +16,7 @@
 }
 
 /**
-1. 提高所有浏览器默认字体的一致性。（https://github.com/sindresorhus/modern-normalize/issues/3）
+1. 提高所有浏览器默认字体的一致性
 2. 修正所有浏览器中的行高
 3. 防止 iOS 更改屏幕方向后调整字体大小
 4. 使用更易读的制表符大小
@@ -69,8 +69,8 @@ strong {
 }
 
 /**
-1. 提高所有浏览器默认字体的一致性。（https://github.com/sindresorhus/modern-normalize/issues/3）
-2. 修正所有浏览器中异常的“em”字体大小
+1. 提高所有浏览器默认字体的一致性
+2. 修正所有浏览器中异常的 em 字体大小
 */
 
 code,
@@ -98,7 +98,7 @@ small {
 }
 
 /**
-防止“sub”和“sup”元素影响所有浏览器中的行高
+防止 sub 和 sup 元素影响所有浏览器中的行高
 */
 
 sub,
@@ -123,7 +123,7 @@ sup {
 */
 
 /**
-修正 Chrome 和 Safari 中表格边框颜色的继承问题。（https://issues.chromium.org/issues/40615503，https://bugs.webkit.org/show_bug.cgi?id=195016）
+修正 Chrome 和 Safari 中表格边框颜色的继承问题
 */
 
 table {
@@ -167,7 +167,7 @@ button,
 }
 
 /**
-移除内边距，避免开发者在所有浏览器中将“fieldset”元素的内边距设为零时出现问题
+移除内边距，避免开发者在所有浏览器中将 fieldset 元素的内边距设为零时出现问题
 */
 
 legend {
