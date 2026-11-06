@@ -1,0 +1,22 @@
+{% extends "base/home.html" %}
+
+
+{% block content %}
+<form action="/login/" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <h1>登录</h1>
+        <p>请填写以下信息以登录您的账户。</p>
+        <hr>
+
+        <label for="username"><b>用户名</b></label>
+        <input type="text" placeholder="请输入用户名" name="username" id="username" required>
+
+        <label for="psw"><b>密码</b></label>
+        <input type="password" placeholder="请输入密码" name="password" id="psw" required>
+        <hr>
+
+        <button type="submit">登录</button>
+    </div>
+</form>
+{% endblock %}

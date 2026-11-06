@@ -5,3 +5,16 @@ body {
 ul li {
     list-style: none;
 }
+
+.container label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
