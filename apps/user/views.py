@@ -13,12 +13,12 @@ def healthy(request):
 
 
 def home(request):
-    return render(request, "base/home.html")
+    return render(request, "base/base.html")
 
 
 class UserRegisterView(View):
     def get(self, request):
-        return render(request, "base/register.html")
+        return render(request, "user/register.html")
 
     def post(self, request):
         form = UserRegisterForm(request.POST)
@@ -32,7 +32,7 @@ class UserRegisterView(View):
 
 class UserLoginView(View):
     def get(self, request):
-        return render(request, "base/login.html")
+        return render(request, "user/login.html")
 
     def post(self, request):
         form = AuthenticationForm(request, request.POST)
