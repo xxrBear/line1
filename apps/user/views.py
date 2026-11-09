@@ -2,7 +2,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import View
 
 from apps.user.forms import UserRegisterForm
@@ -27,7 +27,7 @@ class UserRegisterView(View):
 
         form.save()
 
-        return JsonResponse({"message": "User registered successfully."}, status=201)
+        return redirect("login")
 
 
 class UserLoginView(View):
@@ -39,7 +39,7 @@ class UserLoginView(View):
         if not form.is_valid():
             return JsonResponse(form.errors, status=400)
         auth_login(request, form.get_user())
-        return JsonResponse({"message": "User login successfully."})
+        return redirect("home")
 
 
 class UserLogoutView(View):
