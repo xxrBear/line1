@@ -1,0 +1,21 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+<form method="post" action="">
+    {% csrf_token %}
+    <textarea name="content" id="id_content">{{ article.content }}</textarea>
+    <button type="submit">保存</button>
+</form>
+
+<script>
+    const editor = new EasyMDE({
+        element: document.getElementById('id_content'),
+        spellChecker: false,
+        autosave: { enabled: true, uniqueId: 'article_{{ article.id }}' },
+        placeholder: '开始写吧……',
+        uploadImage: true,
+        imageUploadEndpoint: '/upload-image/',
+    });
+</script>
+{% endblock %}

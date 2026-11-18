@@ -2,7 +2,7 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf import settings
 from django.urls import path
 
-from apps.admin.views import AdminView
+from apps.admin.views import AdminView, ArticleView
 from apps.user.views import (
     UserInfoView,
     UserLoginView,
@@ -22,6 +22,7 @@ urlpatterns = [
     path('user-info/', UserInfoView.as_view(), name='user-info'),
     # Admin
     path('admin/', AdminView.as_view(), name='admin'),
+    path('write_article/', ArticleView.as_view(), name='write_article'),
 ]
 
 if settings.DEBUG is True:
